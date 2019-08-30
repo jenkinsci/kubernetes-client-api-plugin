@@ -1,0 +1,4 @@
+<?jelly escape-by-default='true'?>
+<div>
+    Kubernetes Client API plugin for use by other Jenkins plugins.
+</div>

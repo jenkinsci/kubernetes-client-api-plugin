@@ -1,0 +1,12 @@
+/target/
+/.classpath
+/.project
+/.factorypath
+/.settings/
+
+/.idea/
+*.iml
+nbactions.xml
+*.bak
+.DS_Store
+/.vscode/
