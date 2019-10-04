@@ -19,7 +19,6 @@
         <java.level>8</java.level>
         <kubernetes-client.version>4.6.0</kubernetes-client.version>
         <jackson2-api.version>2.9.9</jackson2-api.version>
-        <slf4jVersion>1.7.26</slf4jVersion>
     </properties>
     <name>Kubernetes Client API Plugin</name>
     <description>This plugin provides the fabric8.io Kubernetes Client API to plugins.</description>
@@ -78,6 +77,11 @@
                 <exclusion>
                     <groupId>org.slf4j</groupId>
                     <artifactId>jul-to-slf4j</artifactId>
+                </exclusion>
+                <!-- Use version shipped with core -->
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-api</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
