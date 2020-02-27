@@ -13,12 +13,12 @@
     <version>${revision}${changelist}</version>
     <packaging>hpi</packaging>
     <properties>
-        <revision>4.6.4-3</revision>
+        <revision>4.8.0-1</revision>
         <changelist>-SNAPSHOT</changelist>
         <jenkins.version>2.176.1</jenkins.version>
         <java.level>8</java.level>
         <kubernetes-client.version>4.8.0</kubernetes-client.version>
-        <jackson2-api.version>2.10.1</jackson2-api.version>
+        <jackson2-api.version>2.10.2</jackson2-api.version>
     </properties>
     <name>Kubernetes Client API Plugin</name>
     <description>This plugin provides the fabric8.io Kubernetes Client API to plugins.</description>
