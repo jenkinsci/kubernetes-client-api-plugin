@@ -15,7 +15,7 @@
     <properties>
         <revision>4.9.1-2</revision>
         <changelist>-SNAPSHOT</changelist>
-        <jenkins.version>2.176.1</jenkins.version>
+        <jenkins.version>2.204.1</jenkins.version>
         <java.level>8</java.level>
         <kubernetes-client.version>4.9.1</kubernetes-client.version>
         <jackson2-api.version>2.10.3</jackson2-api.version>
@@ -56,6 +56,13 @@
                 <groupId>com.fasterxml.jackson.dataformat</groupId>
                 <artifactId>jackson-dataformat-yaml</artifactId>
                 <version>${jackson2-api.version}</version>
+                <exclusions>
+                    <!-- provided by snakeyaml-api -->
+                    <exclusion>
+                        <groupId>org.yaml</groupId>
+                        <artifactId>snakeyaml</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -100,6 +107,11 @@
             <artifactId>bouncycastle-api</artifactId>
             <version>2.17</version>
             <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.jenkins.plugins</groupId>
+            <artifactId>snakeyaml-api</artifactId>
+            <version>1.26.2</version>
         </dependency>
     </dependencies>
     <build>
