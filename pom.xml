@@ -15,10 +15,10 @@
     <properties>
         <revision>4.10.1-1</revision>
         <changelist>-SNAPSHOT</changelist>
-        <jenkins.version>2.204.1</jenkins.version>
+        <jenkins.version>2.204.6</jenkins.version>
         <java.level>8</java.level>
         <kubernetes-client.version>4.10.1</kubernetes-client.version>
-        <jackson2-api.version>2.10.3</jackson2-api.version>
+        <jackson2-api.version>2.11.0</jackson2-api.version>
     </properties>
     <name>Kubernetes Client API Plugin</name>
     <description>This plugin provides the fabric8.io Kubernetes Client API to plugins.</description>
@@ -119,7 +119,7 @@
         <dependency>
             <groupId>io.jenkins.plugins</groupId>
             <artifactId>snakeyaml-api</artifactId>
-            <version>1.26.2</version>
+            <version>1.26.4</version>
         </dependency>
     </dependencies>
     <build>
