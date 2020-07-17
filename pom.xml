@@ -13,11 +13,11 @@
     <version>${revision}${changelist}</version>
     <packaging>hpi</packaging>
     <properties>
-        <revision>4.9.2-3</revision>
+        <revision>4.10</revision>
         <changelist>-SNAPSHOT</changelist>
         <jenkins.version>2.204.6</jenkins.version>
         <java.level>8</java.level>
-        <kubernetes-client.version>4.9.2</kubernetes-client.version>
+        <kubernetes-client.version>4.10-SNAPSHOT</kubernetes-client.version>
         <jackson2-api.version>2.11.0</jackson2-api.version>
     </properties>
     <name>Kubernetes Client API Plugin</name>
@@ -90,6 +90,10 @@
                     <artifactId>jackson-datatype-jsr310</artifactId>
                 </exclusion>
                 <exclusion>
+                    <groupId>com.fasterxml.jackson.module</groupId>
+                    <artifactId>jackson-module-jaxb-annotations</artifactId>
+                </exclusion>
+                <exclusion>
                     <groupId>org.slf4j</groupId>
                     <artifactId>jul-to-slf4j</artifactId>
                 </exclusion>
@@ -104,6 +108,43 @@
             <groupId>io.fabric8</groupId>
             <artifactId>openshift-client</artifactId>
             <version>${kubernetes-client.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.fabric8</groupId>
+            <artifactId>volumesnapshot-client</artifactId>
+            <version>${kubernetes-client.version}</version>
+            <exclusions>
+                <!-- provided by org.jenkins-ci.plugins:jackson2-api  -->
+                <exclusion>
+                    <groupId>com.fasterxml.jackson.core</groupId>
+                    <artifactId>jackson-core</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.fasterxml.jackson.core</groupId>
+                    <artifactId>jackson-databind</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.fasterxml.jackson.core</groupId>
+                    <artifactId>jackson-annotations</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.fasterxml.jackson.datatype</groupId>
+                    <artifactId>jackson-datatype-jsr310</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.fasterxml.jackson.module</groupId>
+                    <artifactId>jackson-module-jaxb-annotations</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>jul-to-slf4j</artifactId>
+                </exclusion>
+                <!-- Use version shipped with core -->
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-api</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.jenkins-ci.plugins</groupId>
@@ -135,9 +176,9 @@
                         <configuration>
                             <rules>
                                 <requireProperty>
-                                    <property>revision</property>
+                                    <property>project.version</property>
                                     <regex>${kubernetes-client.version}.*</regex>
-                                    <regexMessage>kubernetes-client.version (${kubernetes-client.version}) must be a prefix of revision (${revision})</regexMessage>
+                                    <regexMessage>kubernetes-client.version (${kubernetes-client.version}) must be a prefix of project.version (${project.version})</regexMessage>
                                 </requireProperty>
                             </rules>
                             <fail>true</fail>
