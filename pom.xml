@@ -13,11 +13,10 @@
     <version>${revision}${changelist}</version>
     <packaging>hpi</packaging>
     <properties>
-        <revision>4.11.1-2</revision>
-        <changelist>-SNAPSHOT</changelist>
+        <revision>4.11.1</revision>
+        <changelist>-2-SNAPSHOT</changelist>
         <jenkins.version>2.222.4</jenkins.version>
         <java.level>8</java.level>
-        <kubernetes-client.version>4.11.1</kubernetes-client.version>
         <jackson2-api.version>2.12.1</jackson2-api.version>
     </properties>
     <name>Kubernetes Client API Plugin</name>
@@ -53,7 +52,7 @@
         <dependency>
             <groupId>io.fabric8</groupId>
             <artifactId>kubernetes-client</artifactId>
-            <version>${kubernetes-client.version}</version>
+            <version>${revision}</version>
             <exclusions>
                 <!-- provided by org.jenkins-ci.plugins:jackson2-api  -->
                 <exclusion>
@@ -94,12 +93,12 @@
         <dependency>
             <groupId>io.fabric8</groupId>
             <artifactId>openshift-client</artifactId>
-            <version>${kubernetes-client.version}</version>
+            <version>${revision}</version>
         </dependency>
         <dependency>
             <groupId>io.fabric8</groupId>
             <artifactId>volumesnapshot-client</artifactId>
-            <version>${kubernetes-client.version}</version>
+            <version>${revision}</version>
             <exclusions>
                 <!-- provided by org.jenkins-ci.plugins:jackson2-api  -->
                 <exclusion>
@@ -150,29 +149,4 @@
             <version>1.27.0</version>
         </dependency>
     </dependencies>
-    <build>
-        <plugins>
-            <plugin>
-                <artifactId>maven-enforcer-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>enforce-property</id>
-                        <goals>
-                            <goal>enforce</goal>
-                        </goals>
-                        <configuration>
-                            <rules>
-                                <requireProperty>
-                                    <property>project.version</property>
-                                    <regex>${kubernetes-client.version}.*</regex>
-                                    <regexMessage>kubernetes-client.version (${kubernetes-client.version}) must be a prefix of project.version (${project.version})</regexMessage>
-                                </requireProperty>
-                            </rules>
-                            <fail>true</fail>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
 </project>
