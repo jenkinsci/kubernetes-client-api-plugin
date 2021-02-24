@@ -4,8 +4,9 @@ This plugin exposes the [Kubernetes Client](https://github.com/fabric8io/kuberne
 
 # Known usage
 
-* [kubernetes-plugin](https://github.com/jenkinsci/kubernetes-plugin)
+* [kubernetes-credentials-plugin](https://github.com/jenkinsci/kubernetes-credentials-plugin)
 * [kubernetes-credentials-provider-plugin](https://github.com/jenkinsci/kubernetes-credentials-provider-plugin)
+* [kubernetes-plugin](https://github.com/jenkinsci/kubernetes-plugin)
 
 # Environment
 
