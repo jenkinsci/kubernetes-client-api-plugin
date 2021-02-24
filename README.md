@@ -1,7 +1,7 @@
 # Kubernetes Client API Plugin
 
 This plugin exposes the [Kubernetes Client](https://github.com/fabric8io/kubernetes-client) API to Jenkins plugins like 
-[kubernetes-plugins](https://github.com/jenkinsci/kubernetes-plugin) and [kubernetes-credentials-provider-plugin](https://github.com/jenkinsci/kubernetes-credentials-provider-plugin). 
+[kubernetes-plugin](https://github.com/jenkinsci/kubernetes-plugin) and [kubernetes-credentials-provider-plugin](https://github.com/jenkinsci/kubernetes-credentials-provider-plugin). 
 
 # Environment
 
