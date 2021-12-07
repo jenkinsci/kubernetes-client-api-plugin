@@ -22,9 +22,9 @@ To build the plugin locally:
 
 # Release
 
-To release the plugin:
+[See the release page](https://github.com/jenkinsci/kubernetes-client-api-plugin/releases)
 
-    mvn release:prepare release:perform -B
+To release the plugin, just ask a maintainer to merge the PR on master branch.
 
 # Test local instance
 
