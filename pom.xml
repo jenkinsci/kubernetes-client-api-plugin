@@ -13,7 +13,7 @@
     <version>${revision}-${changelist}</version>
     <packaging>hpi</packaging>
     <properties>
-        <revision>5.12.2</revision>
+        <revision>6.3.1</revision>
         <changelist>999999-SNAPSHOT</changelist>
         <jenkins.version>2.249</jenkins.version>
         <java.level>8</java.level>
