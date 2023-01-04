@@ -64,7 +64,6 @@
             <groupId>io.fabric8</groupId>
             <artifactId>kubernetes-client</artifactId>
             <version>${revision}</version>
-
             <exclusions>
                 <!-- provided by org.jenkins-ci.plugins:jackson2-api  -->
                 <exclusion>
