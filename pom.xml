@@ -99,6 +99,15 @@
                     <groupId>org.slf4j</groupId>
                     <artifactId>slf4j-api</artifactId>
                 </exclusion>
+                <!-- provided by io.jenkins.plugins:okhttp-api-->
+                <exclusion>
+                    <groupId>com.squareup.okhttp3</groupId>
+                    <artifactId>okhttp</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.squareup.okhttp3</groupId>
+                    <artifactId>logging-interceptor</artifactId>
+                </exclusion>
             </exclusions>
         </dependency>
         <dependency>
@@ -182,6 +191,10 @@
         <dependency>
             <groupId>io.jenkins.plugins</groupId>
             <artifactId>snakeyaml-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.jenkins.plugins</groupId>
+            <artifactId>okhttp-api</artifactId>
         </dependency>
     </dependencies>
 </project>
