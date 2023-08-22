@@ -18,6 +18,7 @@
         <gitHubRepo>jenkinsci/${project.artifactId}-plugin</gitHubRepo>
         <jenkins.version>2.361.4</jenkins.version>
         <bom>2.361.x</bom>
+        <hpi.compatibleSinceVersion>6.8.1</hpi.compatibleSinceVersion>
     </properties>
     <name>Kubernetes Client API Plugin</name>
     <description>This plugin provides the fabric8.io Kubernetes Client API to plugins.</description>
