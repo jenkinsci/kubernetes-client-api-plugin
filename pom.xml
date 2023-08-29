@@ -4,7 +4,7 @@
     <parent>
         <groupId>org.jenkins-ci.plugins</groupId>
         <artifactId>plugin</artifactId>
-        <version>4.67</version>
+        <version>4.72</version>
         <relativePath />
     </parent>
 
@@ -13,11 +13,13 @@
     <version>${revision}-${changelist}</version>
     <packaging>hpi</packaging>
     <properties>
-        <revision>6.4.1</revision>
+        <revision>6.8.1</revision>
         <changelist>999999-SNAPSHOT</changelist>
         <gitHubRepo>jenkinsci/${project.artifactId}-plugin</gitHubRepo>
-        <jenkins.version>2.361.4</jenkins.version>
-        <bom>2.361.x</bom>
+        <jenkins.version>2.401.1</jenkins.version>
+        <bom>2.401.x</bom>
+        <bom.version>2357.v1043f8578392</bom.version>
+        <hpi.compatibleSinceVersion>6.8.1</hpi.compatibleSinceVersion>
     </properties>
     <name>Kubernetes Client API Plugin</name>
     <description>This plugin provides the fabric8.io Kubernetes Client API to plugins.</description>
@@ -53,7 +55,7 @@
             <dependency>
                 <groupId>io.jenkins.tools.bom</groupId>
                 <artifactId>bom-${bom}</artifactId>
-                <version>1706.vc166d5f429f8</version>
+                <version>${bom.version}</version>
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
@@ -187,10 +189,6 @@
             <groupId>org.jenkins-ci.plugins</groupId>
             <artifactId>bouncycastle-api</artifactId>
             <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.jenkins.plugins</groupId>
-            <artifactId>snakeyaml-api</artifactId>
         </dependency>
         <dependency>
             <groupId>io.jenkins.plugins</groupId>
