@@ -18,7 +18,7 @@
         <gitHubRepo>jenkinsci/${project.artifactId}-plugin</gitHubRepo>
         <jenkins.version>2.401.1</jenkins.version>
         <bom>2.401.x</bom>
-        <bom.version>2378.v3e03930028f2</bom.version>
+        <bom.version>2582.v830625dd636c</bom.version>
         <hpi.compatibleSinceVersion>6.8.1</hpi.compatibleSinceVersion>
     </properties>
     <name>Kubernetes Client API Plugin</name>
