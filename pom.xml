@@ -4,7 +4,7 @@
     <parent>
         <groupId>org.jenkins-ci.plugins</groupId>
         <artifactId>plugin</artifactId>
-        <version>4.88</version>
+        <version>5.7</version>
         <relativePath />
     </parent>
 
@@ -17,10 +17,8 @@
         <changelist>999999-SNAPSHOT</changelist>
         <gitHubRepo>jenkinsci/${project.artifactId}-plugin</gitHubRepo>
         <!-- https://www.jenkins.io/doc/developer/plugin-development/choosing-jenkins-baseline/ -->
-        <jenkins.baseline>2.401</jenkins.baseline>
-        <jenkins.version>${jenkins.baseline}.3</jenkins.version>
-        <bom>${jenkins.baseline}.x</bom>
-        <bom.version>2745.vc7b_fe4c876fa_</bom.version>
+        <jenkins.baseline>2.479</jenkins.baseline>
+        <jenkins.version>${jenkins.baseline}.1</jenkins.version>
         <hpi.compatibleSinceVersion>6.8.1</hpi.compatibleSinceVersion>
     </properties>
     <name>Kubernetes Client API Plugin</name>
@@ -56,8 +54,8 @@
         <dependencies>
             <dependency>
                 <groupId>io.jenkins.tools.bom</groupId>
-                <artifactId>bom-${bom}</artifactId>
-                <version>${bom.version}</version>
+                <artifactId>bom-${jenkins.baseline}.x</artifactId>
+                <version>3893.v213a_42768d35</version>
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
