@@ -13,7 +13,7 @@
     <version>${revision}-${changelist}</version>
     <packaging>hpi</packaging>
     <properties>
-        <revision>7.2.0</revision>
+        <revision>7.3.1</revision>
         <changelist>999999-SNAPSHOT</changelist>
         <gitHubRepo>jenkinsci/${project.artifactId}-plugin</gitHubRepo>
         <!-- https://www.jenkins.io/doc/developer/plugin-development/choosing-jenkins-baseline/ -->
