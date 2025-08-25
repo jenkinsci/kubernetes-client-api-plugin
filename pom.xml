@@ -20,6 +20,8 @@
         <jenkins.baseline>2.504</jenkins.baseline>
         <jenkins.version>${jenkins.baseline}.1</jenkins.version>
         <hpi.compatibleSinceVersion>6.8.1</hpi.compatibleSinceVersion>
+        <hpi.strictBundledArtifacts>true</hpi.strictBundledArtifacts>
+        <hpi.bundledArtifacts>kubernetes-client,kubernetes-client-api,kubernetes-httpclient-okhttp,kubernetes-model-admissionregistration,kubernetes-model-apiextensions,kubernetes-model-apps,kubernetes-model-autoscaling,kubernetes-model-batch,kubernetes-model-certificates,kubernetes-model-common,kubernetes-model-coordination,kubernetes-model-core,kubernetes-model-discovery,kubernetes-model-events,kubernetes-model-extensions,kubernetes-model-flowcontrol,kubernetes-model-gatewayapi,kubernetes-model-metrics,kubernetes-model-networking,kubernetes-model-node,kubernetes-model-policy,kubernetes-model-rbac,kubernetes-model-resource,kubernetes-model-scheduling,kubernetes-model-storageclass,openshift-client,openshift-client-api,openshift-model,openshift-model-autoscaling,openshift-model-config,openshift-model-console,openshift-model-hive,openshift-model-installer,openshift-model-machine,openshift-model-machineconfiguration,openshift-model-miscellaneous,openshift-model-monitoring,openshift-model-operator,openshift-model-operatorhub,openshift-model-storageversionmigrator,openshift-model-tuned,openshift-model-whereabouts,snakeyaml-engine,volumesnapshot-client,volumesnapshot-model,zjsonpatch</hpi.bundledArtifacts>
     </properties>
     <name>Kubernetes Client API Plugin</name>
     <description>This plugin provides the fabric8.io Kubernetes Client API to plugins.</description>
