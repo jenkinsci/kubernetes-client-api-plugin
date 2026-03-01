@@ -13,15 +13,15 @@
     <version>${revision}-${changelist}</version>
     <packaging>hpi</packaging>
     <properties>
-        <revision>7.3.1</revision>
+        <revision>7.6.1</revision>
         <changelist>999999-SNAPSHOT</changelist>
         <gitHubRepo>jenkinsci/${project.artifactId}-plugin</gitHubRepo>
         <!-- https://www.jenkins.io/doc/developer/plugin-development/choosing-jenkins-baseline/ -->
-        <jenkins.baseline>2.504</jenkins.baseline>
+        <jenkins.baseline>2.516</jenkins.baseline>
         <jenkins.version>${jenkins.baseline}.1</jenkins.version>
         <hpi.compatibleSinceVersion>6.8.1</hpi.compatibleSinceVersion>
         <hpi.strictBundledArtifacts>true</hpi.strictBundledArtifacts>
-        <hpi.bundledArtifacts>kubernetes-client,kubernetes-client-api,kubernetes-httpclient-okhttp,kubernetes-model-admissionregistration,kubernetes-model-apiextensions,kubernetes-model-apps,kubernetes-model-autoscaling,kubernetes-model-batch,kubernetes-model-certificates,kubernetes-model-common,kubernetes-model-coordination,kubernetes-model-core,kubernetes-model-discovery,kubernetes-model-events,kubernetes-model-extensions,kubernetes-model-flowcontrol,kubernetes-model-gatewayapi,kubernetes-model-metrics,kubernetes-model-networking,kubernetes-model-node,kubernetes-model-policy,kubernetes-model-rbac,kubernetes-model-resource,kubernetes-model-scheduling,kubernetes-model-storageclass,openshift-client,openshift-client-api,openshift-model,openshift-model-autoscaling,openshift-model-config,openshift-model-console,openshift-model-hive,openshift-model-installer,openshift-model-machine,openshift-model-machineconfiguration,openshift-model-miscellaneous,openshift-model-monitoring,openshift-model-operator,openshift-model-operatorhub,openshift-model-storageversionmigrator,openshift-model-tuned,openshift-model-whereabouts,snakeyaml-engine,volumesnapshot-client,volumesnapshot-model,zjsonpatch</hpi.bundledArtifacts>
+        <hpi.bundledArtifacts>kubernetes-client,kubernetes-client-api,kubernetes-httpclient-okhttp,kubernetes-model-admissionregistration,kubernetes-model-apiextensions,kubernetes-model-apps,kubernetes-model-autoscaling,kubernetes-model-batch,kubernetes-model-certificates,kubernetes-model-common,kubernetes-model-coordination,kubernetes-model-core,kubernetes-model-discovery,kubernetes-model-events,kubernetes-model-extensions,kubernetes-model-flowcontrol,kubernetes-model-gatewayapi,kubernetes-model-metrics,kubernetes-model-networking,kubernetes-model-node,kubernetes-model-policy,kubernetes-model-rbac,kubernetes-model-resource,kubernetes-model-scheduling,kubernetes-model-storageclass,openshift-client,openshift-client-api,openshift-model,openshift-model-autoscaling,openshift-model-config,openshift-model-console,openshift-model-hive,openshift-model-installer,openshift-model-machine,openshift-model-machineconfiguration,openshift-model-miscellaneous,openshift-model-monitoring,openshift-model-operator,openshift-model-operatorhub,openshift-model-storageversionmigrator,openshift-model-tuned,openshift-model-whereabouts,volumesnapshot-client,volumesnapshot-model,zjsonpatch</hpi.bundledArtifacts>
     </properties>
     <name>Kubernetes Client API Plugin</name>
     <description>This plugin provides the fabric8.io Kubernetes Client API to plugins.</description>
@@ -57,7 +57,7 @@
             <dependency>
                 <groupId>io.jenkins.tools.bom</groupId>
                 <artifactId>bom-${jenkins.baseline}.x</artifactId>
-                <version>5015.vb_52d36583443</version>
+                <version>6128.v8e4ce4620a_2b_</version>
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
@@ -69,6 +69,11 @@
             <artifactId>kubernetes-client</artifactId>
             <version>${revision}</version>
             <exclusions>
+                <!-- Provided by io.jenkins.plugins:snakeyaml-engine-api -->
+                <exclusion>
+                    <groupId>org.snakeyaml</groupId>
+                    <artifactId>snakeyaml-engine</artifactId>
+                </exclusion>
                 <!-- provided by org.jenkins-ci.plugins:jackson2-api  -->
                 <exclusion>
                     <groupId>com.fasterxml.jackson.core</groupId>
@@ -161,6 +166,10 @@
                 <exclusion>
                     <groupId>com.squareup.okhttp3</groupId>
                     <artifactId>okhttp</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.squareup.okhttp3</groupId>
+                    <artifactId>okhttp-jvm</artifactId>
                 </exclusion>
                 <exclusion>
                     <groupId>com.squareup.okhttp3</groupId>
@@ -261,6 +270,10 @@
         <dependency>
             <groupId>io.jenkins.plugins</groupId>
             <artifactId>okhttp-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.jenkins.plugins</groupId>
+            <artifactId>snakeyaml-engine-api</artifactId>
         </dependency>
     </dependencies>
 </project>
